@@ -1,0 +1,23 @@
+<!-- CHERRY WEB STUDIO HERO IMAGE -->
+
+<div class="hero-image">
+  <img
+    src="hero.png"
+    alt="Cherry Web Studio professional website design showcase"
+  >
+</div>
+/* HERO WEBSITE SHOWCASE IMAGE */
+
+  width: min(1100px, 92%);
+  margin: 0 auto 60px;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(99, 19, 41, 0.18);
+  border: 1px solid #f0d5df;
+
+
+
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
