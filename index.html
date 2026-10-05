@@ -49,7 +49,24 @@
 main, footer { position: relative; z-index: 1; }
 .hero { background: radial-gradient(circle at 90% 15%, #ffd9e5 0, transparent 28%), radial-gradient(circle at 5% 90%, #fce3eb 0, transparent 30%); }
 @media (prefers-reduced-motion: reduce) { .bg-float { display: none; } }
-    * {
+    <style>
+    .bg-float { position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
+.bg-float span { position: absolute; bottom: -150px; border-radius: 50%; background: rgba(230,91,134,0.16); animation: floatUp 18s linear infinite; }
+.bg-float span:nth-child(1) { left: 5%; width: 60px; height: 60px; animation-duration: 16s; }
+.bg-float span:nth-child(2) { left: 18%; width: 30px; height: 30px; animation-duration: 12s; animation-delay: 3s; }
+.bg-float span:nth-child(3) { left: 32%; width: 90px; height: 90px; animation-duration: 22s; animation-delay: 1s; }
+.bg-float span:nth-child(4) { left: 46%; width: 40px; height: 40px; animation-duration: 14s; animation-delay: 6s; }
+.bg-float span:nth-child(5) { left: 60%; width: 70px; height: 70px; animation-duration: 20s; animation-delay: 2s; }
+.bg-float span:nth-child(6) { left: 72%; width: 25px; height: 25px; animation-duration: 11s; animation-delay: 5s; }
+.bg-float span:nth-child(7) { left: 84%; width: 80px; height: 80px; animation-duration: 24s; animation-delay: 4s; }
+.bg-float span:nth-child(8) { left: 94%; width: 45px; height: 45px; animation-duration: 15s; animation-delay: 8s; }
+@keyframes floatUp {
+  0% { transform: translateY(0) scale(1); opacity: 0; }
+  10% { opacity: 1; }
+  100% { transform: translateY(-120vh) scale(1.3); opacity: 0; }
+}
+main, footer { position: relative; z-index: 1; }
+@media (prefers-reduced-motion: reduce) { .bg-float { display: none; } }
       box-sizing: border-box;
       margin: 0;
       padding: 0;
